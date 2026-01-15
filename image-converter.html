@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Converter Tool</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Image Converter</h1>
+  <p>Convert images to JPG, PNG or WEBP easily</p>
+
+  <div class="card">
+    <input type="file" id="upload" accept="image/*">
+
+    <div class="preview-box">
+      <img id="preview" alt="Preview">
+    </div>
+
+    <label>Convert To</label>
+    <select id="format">
+      <option value="image/jpeg">JPG</option>
+      <option value="image/png">PNG</option>
+      <option value="image/webp">WEBP</option>
+    </select>
+
+    <label>Compression Quality</label>
+    <input type="range" id="quality" min="0.1" max="1" step="0.1" value="0.8">
+    <span id="qualityValue">80%</span>
+
+    <button id="convertBtn">Convert & Download</button>
+  </div>
+</div>
+
+<canvas id="canvas" hidden></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
